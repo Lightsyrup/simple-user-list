@@ -1,48 +1,49 @@
 module.exports = {
-	"env": {
-		"browser": true,
-		"commonjs": true,
-		"es2021": true,
-		"node": true
-	},
-	parser: "@babel/eslint-parser",
-	"extends": [
-		"eslint:recommended",
-		"plugin:react/recommended",
-		"prettier"
-	],
-	"parserOptions": {
-		requireConfigFile: false,
-		babelOptions: {
-			presets: [
-				"@babel/preset-env",
-				[
-					"@babel/preset-react"
-				]
-			]
-		}
-	},
-	"plugins": [
-		"react",
-		"prettier"
-	],
-	"rules": {
-		"quotes": [
-			"error",
-			"double"
-		],
-		"semi": [
-			"error",
-			"always"
-		],
-		"no-dupe-keys": 0,
-		"react/prop-types": 0
-	},
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        requireConfigFile: false,
+        babelOptions: {
+            presets: [
+                "@babel/preset-env",
+                [
+                    "@babel/preset-react"
+                ],
+
+            ]
+        },
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "react/prop-types": 0,
+        "@typescript-eslint/no-var-requires": 0
+    }
 };
-
-
-
-
-
-
-

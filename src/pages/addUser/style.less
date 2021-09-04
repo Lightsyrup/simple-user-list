@@ -1,0 +1,35 @@
+.add-user-container {
+  margin-left: 38%;
+  @font-weight: 550;
+  @font-size: 20px;
+  @width: 40px;
+
+  .add-user-container-item {
+    font-weight: @font-weight;
+    font-size: @font-size;
+    margin-bottom: 10px;
+    input {
+      width: @width+270;
+      height: 18px;
+    }
+    .add-user-container-item-mustInput {
+      &::after {
+        content: "*";
+        color: red;
+      }
+    }
+  }
+
+  .add-user-container-button {
+    button {
+      width: @width*2;
+      height: 27px;
+      border: none;
+      margin: 10px;
+      &:hover {
+        background-color: rgb(247, 168, 77);
+        cursor: pointer;
+      }
+    }
+  }
+}

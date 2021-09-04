@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import BasicRoutes from "./routes/index.jsx";
+import "./index.less";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <div>你好，React-webpack5-template</div>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<BasicRoutes />
+	</React.StrictMode >,
+	document.getElementById("root")
 );

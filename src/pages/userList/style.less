@@ -1,0 +1,64 @@
+.user-lint-page-container {
+  margin-left: 25%;
+  @table-layout: fixed;
+  @white-space: nowrap;
+  @text-overflow: ellipsis;
+  @overflow: hidden;
+  @border:black 1px solid;
+  @border-collapse: collapse;
+  @width: 150px;
+  @text-align: center;
+
+  .user-lint-page-container-tableHead {
+    font-weight: 550;
+    text-align: @text-align;
+  }
+
+  .user-lint-page-container-short {
+    width: @width;
+    max-width: @width;
+    border: @border;
+    border-collapse: @border-collapse;
+    white-space: @white-space;
+    text-overflow: @text-overflow;
+    overflow: @overflow;
+  }
+
+  .user-lint-page-container-long {
+    .user-lint-page-container-short();
+    width: @width*2;
+    max-width: @width*2;
+  }
+
+  .user-lint-page-container-handle {
+    .user-lint-page-container-short();
+    width: @width+30px;
+    text-align: @text-align;
+    .user-lint-page-container-deleteuser {
+      &:hover {
+        cursor: pointer;
+        color: blue;
+      }
+    }
+    .user-lint-page-container-edituser {
+      .user-lint-page-container-deleteuser();
+      text-decoration: none;
+    }
+  }
+
+  .user-lint-page-container-edituser {
+    margin-left: 10%;
+    .mustInput {
+      &::after {
+        content: "*";
+        color: red;
+      }
+    }
+  }
+  .user-lint-page-container-head {
+    &:hover {
+      color: rgb(247, 168, 77);
+      cursor: pointer;
+    }
+  }
+}
