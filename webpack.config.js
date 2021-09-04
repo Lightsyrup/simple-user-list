@@ -41,7 +41,7 @@ const config = {
 };
 if (isDev) {
   config["devServer"] = {
-    port: 8080,
+    port: 1000,
     host: "0.0.0.0",
     historyApiFallback: true
   };
